@@ -36,3 +36,5 @@ test('the first course to have a property of title', () => {
 test('the first course to have a property of title and value of 31,266', () => {
     expect(data[0]).toHaveProperty('views', '31,266');
   });
+
+//adding commit to see if its verified
