@@ -4,13 +4,14 @@ import Single from './Single';
 
 export default class Grid extends Component {
   renderList() {
-    return this.props.items.map((item) => (
-      <Single key={item.id} item={item}/>
+    const { items } = this.props;
+    return items.map((item) => (
+      <Single key={item.id} item={item} />
     ));
   }
 
   render() {
-    return(
+    return (
       <div>
         <div className="row">
           <ul>
@@ -18,10 +19,11 @@ export default class Grid extends Component {
           </ul>
         </div>
       </div>
-    )
+    );
   }
 }
 
 Grid.propTypes = {
-  items: PropTypes.array.isRequired
+  // eslint-disable-next-line react/forbid-prop-types
+  items: PropTypes.array.isRequired,
 };
